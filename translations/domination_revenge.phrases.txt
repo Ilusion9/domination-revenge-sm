@@ -1,0 +1,38 @@
+"Phrases"
+{
+	"You Took Revenge"
+	{
+		"#format"		"{1:N}"
+		"en"			"You took revenge on {$orange}{1}."
+	}
+
+	"Has Taken Revenge"
+	{
+		"#format"		"{1:N}"
+		"en"			"{$red}{1}{$default} has taken revenge on you."
+	}
+	
+	"Is Dominating You"
+	{
+		"#format"		"{1:N}"
+		"en"			"{$red}{1}{$default} is dominating you."
+	}
+
+	"You Are Dominating"
+	{
+		"#format"		"{1:N}"
+		"en"			"You are now dominating {$orange}{1}."
+	}
+	
+	"Is Still Dominating You"
+	{
+		"#format"		"{1:N}"
+		"en"			"{$red}{1}{$default} is still dominating you."
+	}
+
+	"You Are Still Dominating"
+	{
+		"#format"		"{1:N}"
+		"en"			"You are still dominating {$orange}{1}."
+	}
+}
