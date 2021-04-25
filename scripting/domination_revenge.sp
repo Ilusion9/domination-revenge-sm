@@ -28,6 +28,11 @@ public void OnPluginStart()
 	HookEvent("player_death", Event_PlayerDeath_Pre, EventHookMode_Pre);
 }
 
+public void OnConfigsExecuted()
+{
+	SetConVar("sv_nonemesis", "1");
+}
+
 public void OnClientConnected(int client)
 {
 	for (int i = 1; i <= MaxClients; i++)
@@ -62,7 +67,9 @@ public void Event_PlayerDeath_Pre(Event event, const char[] name, bool dontBroad
 	
 	if (takingRevenge)
 	{
-		if (g_EngineVesion == Engine_CSGO)
+		if (g_EngineVesion == Engine_CSS 
+			|| g_EngineVesion == Engine_CSGO 
+			|| g_EngineVesion == Engine_DODS)
 		{
 			event.SetBool("revenge", true);
 		}
@@ -77,7 +84,9 @@ public void Event_PlayerDeath_Pre(Event event, const char[] name, bool dontBroad
 			return;
 		}
 		
-		if (g_EngineVesion == Engine_CSGO)
+		if (g_EngineVesion == Engine_CSS 
+			|| g_EngineVesion == Engine_CSGO 
+			|| g_EngineVesion == Engine_DODS)
 		{
 			event.SetBool("dominated", true);
 		}
@@ -93,4 +102,13 @@ public void Event_PlayerDeath_Pre(Event event, const char[] name, bool dontBroad
 			CPrintToChat(attacker, "%t", "You Are Still Dominating", client);
 		}
 	}
-}  
+}
+
+void SetConVar(const char[] cvarName, const char[] value)
+{
+	ConVar cvar = FindConVar(cvarName);
+	if (cvar)
+	{
+		cvar.SetString(value);
+	}
+}
