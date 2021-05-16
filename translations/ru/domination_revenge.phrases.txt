@@ -1,0 +1,32 @@
+"Phrases"
+{
+	"You Took Revenge"
+	{
+		"ru"			"Вы наслаждаетесь местью над {$orange}{1}."
+	}
+
+	"Has Taken Revenge"
+	{
+		"ru"			"{$red}{1}{$default} наслаждается местью над вами."
+	}
+	
+	"Is Dominating You"
+	{
+		"ru"			"{$red}{1}{$default} доминирует над вами."
+	}
+
+	"You Are Dominating"
+	{
+		"ru"			"Вы доминируете над {$orange}{1}."
+	}
+	
+	"Is Still Dominating You"
+	{
+		"ru"			"{$red}{1}{$default} сих пор доминирует над вами."
+	}
+
+	"You Are Still Dominating"
+	{
+		"ru"			"Вы до сих пор доминируете над {$orange}{1}."
+	}
+}
